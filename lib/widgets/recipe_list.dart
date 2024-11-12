@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import '../model/models.dart';
 import './recipe_card.dart';
+
 class RecipeList extends StatefulWidget {
   const RecipeList({super.key});
 
@@ -9,7 +10,6 @@ class RecipeList extends StatefulWidget {
 }
 
 class _RecipeListState extends State<RecipeList> {
-  List<Recipe> myRecipes = []; // Inicjalizacja listy przepisów
 
   void addRecipe(String name, List<String> ingredients, List<String> steps) {
     setState(() {
@@ -20,19 +20,28 @@ class _RecipeListState extends State<RecipeList> {
       ));
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    return Expanded(child:
-    GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2, // Liczba kolumn w rzędzie
-        crossAxisSpacing: 8, // Odstęp między kolumnami
-        mainAxisSpacing: 8,  // Odstęp między rzędami
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0,50,0,0),
+      child: Column(
+        children: [
+          Expanded(
+            child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+              ),
+              itemCount: myRecipes.length,
+              itemBuilder: (context, index) {
+                return RecipeCard(recipe: myRecipes[index]);
+              },
+            ),
+          )
+        ],
       ),
-      itemCount: myRecipes.length,
-      itemBuilder: (context, index){
-        return RecipeCard(recipe: myRecipes[index]);
-      },
-    ));
+    );
   }
 }
