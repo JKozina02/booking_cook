@@ -2,11 +2,13 @@ class Recipe{
   String recipeName;
   List<String> recipeIngredients;
   List<String> recipeSteps;
+  String? imagePath;
 
   Recipe({
     required this.recipeName,
     required this.recipeIngredients,
-    required this.recipeSteps
+    required this.recipeSteps,
+    this.imagePath
   });
 }
 
