@@ -3,19 +3,28 @@ import '../model/models.dart';
 
 class RecipeProvider with ChangeNotifier {
   final TextEditingController searchController = TextEditingController();
+  Future<List<Recipe>>? _searchResults;
+  bool _isLoading = false;
+  String? _errorMessage;
   List<Recipe> myRecipes = [];
   List<Recipe> likedRecipes = [];
-  String? errorMessage;
-  bool isLoading = false;
-  Future<List<Recipe>>? searchResults;
-  bool get hasError => errorMessage != null;
 
+  Future<List<Recipe>>? get searchResults => _searchResults;
+  bool get isLoading => _isLoading;
+  String? get errorMessage => _errorMessage;
+  bool get hasError => errorMessage != null;
   void searchRecipe() {
+    _isLoading = true;
+    _errorMessage = null;
     notifyListeners();
 
     fetchRecipeListByName(searchController.text).then((results) {
+      _searchResults = Future.value(results);
+      _isLoading = false;
       notifyListeners();
     }).catchError((error) {
+      _errorMessage = error.toString();
+      _isLoading = false;
       notifyListeners();
     });
   }
