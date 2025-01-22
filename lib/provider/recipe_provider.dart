@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
 import '../model/models.dart';
 
 class RecipeProvider with ChangeNotifier {
@@ -9,10 +11,15 @@ class RecipeProvider with ChangeNotifier {
   List<Recipe> myRecipes = [];
   List<Recipe> likedRecipes = [];
 
+  RecipeProvider() {
+    _loadRecipes();
+  }
+
   Future<List<Recipe>>? get searchResults => _searchResults;
   bool get isLoading => _isLoading;
   String? get errorMessage => _errorMessage;
   bool get hasError => errorMessage != null;
+
   void searchRecipe() {
     _isLoading = true;
     _errorMessage = null;
@@ -100,11 +107,13 @@ class RecipeProvider with ChangeNotifier {
       recipeInstruction: recipeInstruction,
       imagePath: null,
     ));
+    _saveRecipes();
     notifyListeners();
   }
 
   void deleteRecipe(int recipeId) {
     myRecipes.removeWhere((recipe) => recipe.recipeId == recipeId);
+    _saveRecipes();
     notifyListeners();
   }
 
@@ -118,6 +127,23 @@ class RecipeProvider with ChangeNotifier {
         recipeInstruction: recipeInstruction,
         imagePath: null,
       );
+      _saveRecipes();
+      notifyListeners();
+    }
+  }
+
+  Future<void> _saveRecipes() async {
+    final prefs = await SharedPreferences.getInstance();
+    final recipesJson = myRecipes.map((recipe) => recipe.toJson()).toList();
+    prefs.setString('myRecipes', jsonEncode(recipesJson));
+  }
+
+  Future<void> _loadRecipes() async {
+    final prefs = await SharedPreferences.getInstance();
+    final recipesJson = prefs.getString('myRecipes');
+    if (recipesJson != null) {
+      final List<dynamic> recipesList = jsonDecode(recipesJson);
+      myRecipes = recipesList.map((json) => Recipe.fromJson(json)).toList();
       notifyListeners();
     }
   }

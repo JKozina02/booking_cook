@@ -40,6 +40,16 @@ class Recipe {
       imagePath: json['image'] as String?,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': recipeId,
+      'title': recipeName,
+      'extendedIngredients': recipeIngredients.map((ingredient) => {'original': ingredient}).toList(),
+      'instructions': recipeInstruction,
+      'image': imagePath,
+    };
+  }
 }
 
 Future<List<Recipe>> fetchRecipeListByName(String recipeName) async {
