@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'model/models.dart';
+import 'package:provider/provider.dart';
+import 'provider/recipe_provider.dart';
 
 class AddRecipePage extends StatefulWidget {
   const AddRecipePage({super.key});
@@ -14,21 +15,10 @@ class _AddRecipePageState extends State<AddRecipePage> {
   final _ingredientsController = TextEditingController();
   final _stepsController = TextEditingController();
 
-  void _addRecipe() {
-    if (_formKey.currentState!.validate()) {
-      addRecipe(
-        _recipeNameController.text,
-        _ingredientsController.text.split(','),
-        _stepsController.text,
-      );
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Przepis dodany!')),
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
+    final recipeProvider = Provider.of<RecipeProvider>(context);
+
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Form(
@@ -66,7 +56,21 @@ class _AddRecipePageState extends State<AddRecipePage> {
               },
             ),
             ElevatedButton(
-              onPressed: _addRecipe,
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  recipeProvider.addRecipe(
+                    _recipeNameController.text,
+                    _ingredientsController.text.split(', '),
+                    _stepsController.text,
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Przepis dodany!')),
+                  );
+                  _recipeNameController.clear();
+                  _ingredientsController.clear();
+                  _stepsController.clear();
+                }
+              },
               child: const Text('Dodaj przepis'),
             ),
           ],

@@ -2,6 +2,7 @@ C/C++ Structured Logp
 n
 lD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\additional_project_files.txtC
 A
+<<<<<<< HEAD
 ?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	èäðøÈ2 ‡Ûë×Æ2m
 k
 iD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\android_gradle_build.json	èäðøÈ2¶ ‰Ûë×Æ2r
@@ -26,3 +27,29 @@ i
 gD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\symbol_folder_index.txt	èäðøÈ2^ ŠÛë×Æ2K
 I
 GD:\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	èäðøÈ2§ ÎÉÉ–¾2
+=======
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ž÷²üÅ2 –‚£ÀÀ2m
+k
+iD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\android_gradle_build.json	ž÷²üÅ2¶ ˜‚£ÀÀ2r
+p
+nD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\android_gradle_build_mini.json	ž÷²üÅ2‘ Ÿ‚£ÀÀ2_
+]
+[D:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\build.ninja	ž÷²üÅ2£Ô ×£ÀÀ2c
+a
+_D:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\build.ninja.txt	ž÷²üÅ2h
+f
+dD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\build_file_index.txt	ž÷²üÅ2G  ‚£ÀÀ2i
+g
+eD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\compile_commands.json	ž÷²üÅ2m
+k
+iD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\compile_commands.json.bin	ž÷²üÅ2	s
+q
+oD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\metadata_generation_command.txt	ž÷²üÅ2
+È  ‚£ÀÀ2f
+d
+bD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\prefab_config.json	ž÷²üÅ2(  ‚£ÀÀ2k
+i
+gD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\x86_64\symbol_folder_index.txt	ž÷²üÅ2^  ‚£ÀÀ2K
+I
+GD:\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	ž÷²üÅ2§ ÎÉÉ–¾2
+>>>>>>> 12d7e8f3e2ff09d04925f0c3aa89a647e487ddea

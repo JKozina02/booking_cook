@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 const String apiKey = 'a417d11919314fcaaba6dea39ece48fd';
-List<Recipe> myRecipes = [];
 
 class Recipe {
   final int recipeId;
@@ -75,14 +74,4 @@ Future<Recipe> fetchRecipeDetails(int recipeId) async {
     debugPrint('Failed to load recipe details: ${response.statusCode}');
     throw Exception('Failed to load recipe details: ${response.statusCode}');
   }
-}
-
-void addRecipe(String recipeName, List<String> recipeIngredients, String recipeInstruction) {
-  myRecipes.add(Recipe(
-    recipeId: myRecipes.length + 1, // Assign a unique ID for the new recipe
-    recipeName: recipeName,
-    recipeIngredients: recipeIngredients,
-    recipeInstruction: recipeInstruction,
-    imagePath: null,
-   ));
 }

@@ -2,6 +2,7 @@ C/C++ Structured Logu
 s
 qD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\additional_project_files.txtC
 A
+<<<<<<< HEAD
 ?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ÕäðøÈ2 ÕÎë×Æ2r
 p
 nD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\android_gradle_build.json	ÕäðøÈ2À ÚÎë×Æ2w
@@ -26,3 +27,29 @@ n
 lD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\symbol_folder_index.txt	ÕäðøÈ2c ÜÎë×Æ2K
 I
 GD:\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	ÕäðøÈ2§ ÎÉÉ–¾2
+=======
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ôõ²üÅ2 íó¢ÀÀ2r
+p
+nD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\android_gradle_build.json	ôõ²üÅ2À ïó¢ÀÀ2w
+u
+sD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\android_gradle_build_mini.json	ôõ²üÅ2› ÷ó¢ÀÀ2d
+b
+`D:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\build.ninja	ôõ²üÅ2¼Ô ¬ó¢ÀÀ2h
+f
+dD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\build.ninja.txt	õõ²üÅ2m
+k
+iD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\build_file_index.txt	õõ²üÅ2G øó¢ÀÀ2n
+l
+jD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\compile_commands.json	õõ²üÅ2r
+p
+nD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\compile_commands.json.bin	õõ²üÅ2	x
+v
+tD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\metadata_generation_command.txt	õõ²üÅ2
+á øó¢ÀÀ2k
+i
+gD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\prefab_config.json	õõ²üÅ2( øó¢ÀÀ2p
+n
+lD:\Code\Flutter\BookingCook\booking_cook\android\app\.cxx\Debug\b2c73693\armeabi-v7a\symbol_folder_index.txt	õõ²üÅ2c øó¢ÀÀ2K
+I
+GD:\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	õõ²üÅ2§ ÎÉÉ–¾2
+>>>>>>> 12d7e8f3e2ff09d04925f0c3aa89a647e487ddea

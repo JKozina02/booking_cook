@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'model/models.dart';
 import 'provider/recipe_provider.dart';
+import 'model/models.dart';
 
 class SearchRecipePage extends StatelessWidget {
   const SearchRecipePage({super.key});
