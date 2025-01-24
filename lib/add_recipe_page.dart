@@ -15,10 +15,24 @@ class _AddRecipePageState extends State<AddRecipePage> {
   final _ingredientsController = TextEditingController();
   final _stepsController = TextEditingController();
 
+  void _addRecipe() {
+    if (_formKey.currentState!.validate()) {
+      Provider.of<RecipeProvider>(context, listen: false).addRecipe(
+        _recipeNameController.text,
+        _ingredientsController.text.split(','),
+        _stepsController.text,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Przepis dodany!')),
+      );
+      _recipeNameController.clear();
+      _ingredientsController.clear();
+      _stepsController.clear();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final recipeProvider = Provider.of<RecipeProvider>(context);
-
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Form(
@@ -56,21 +70,7 @@ class _AddRecipePageState extends State<AddRecipePage> {
               },
             ),
             ElevatedButton(
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  recipeProvider.addRecipe(
-                    _recipeNameController.text,
-                    _ingredientsController.text.split(', '),
-                    _stepsController.text,
-                  );
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Przepis dodany!')),
-                  );
-                  _recipeNameController.clear();
-                  _ingredientsController.clear();
-                  _stepsController.clear();
-                }
-              },
+              onPressed: _addRecipe,
               child: const Text('Dodaj przepis'),
             ),
           ],

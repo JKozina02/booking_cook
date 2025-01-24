@@ -88,7 +88,7 @@ class MyRecipePage extends StatelessWidget {
                     ],
                   ),
                   onTap: () {
-                    recipeProvider.showRecipeDetails(context, recipe.recipeId);
+                    recipeProvider.showRecipeDetails(context, recipe);
                   },
                 ),
               );

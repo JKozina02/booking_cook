@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'add_recipe_page.dart';
-import 'search_recipe_page.dart';
+import 'search_recipe_page.dart' as search_recipe;
 import 'my_recipe_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,9 +12,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  static const List<Widget> _pages = <Widget>[
+  static final List<Widget> _pages = <Widget>[
     AddRecipePage(),
-    SearchRecipePage(),
+    search_recipe.SearchRecipePage(),
     MyRecipePage(),
   ];
 
@@ -29,12 +29,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('BookingCook'),
-        backgroundColor: Colors.deepPurple,
       ),
-      body: Container(
-        color: Colors.deepPurple[50],
-        child: _pages[_selectedIndex],
-      ),
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

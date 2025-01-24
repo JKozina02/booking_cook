@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'provider/recipe_provider.dart';
 import 'model/models.dart';
+
 class SearchRecipePage extends StatelessWidget {
   const SearchRecipePage({super.key});
 
@@ -51,18 +52,14 @@ class SearchRecipePage extends StatelessWidget {
                               trailing: IconButton(
                                 icon: const Icon(Icons.save),
                                 onPressed: () {
-                                  provider.addRecipe(
-                                    recipe.recipeName,
-                                    recipe.recipeIngredients,
-                                    recipe.recipeInstruction,
-                                  );
+                                  provider.addRecipeFromApi(recipe.recipeId);
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(content: Text('Przepis zapisany!')),
                                   );
                                 },
                               ),
                               onTap: () {
-                                recipeProvider.showRecipeDetails(context, recipe.recipeId, fromSearch: true);
+                                recipeProvider.showRecipeDetails(context, recipe);
                               },
                             );
                           },
